@@ -14,7 +14,9 @@ A simple tool to fetch &amp; display METARs from NOAA's Aviation Weather Center
 
 ### Usage
 The script takes US airport ICAO codes as arguments. Although ICAO codes are capitalized (i.e., KDCA), argument capitalization 
-does not matter (Acceptable inputs: kdca; KDCA; kDcA; etc...). For example:
+does not matter (Acceptable inputs: kdca; KDCA; kDcA; etc...). 
+
+For example:
 
 ```
 python metar-cmd.py kbwi kdca kiad
@@ -34,7 +36,9 @@ Updating in: 5:00
 ```
 
 The script updates the METARs every 5 minutes, and displayes a running timer counting down the minutes and seconds until the next
-update in the lower left corner. In order to not display the update timer, enter `-t` as the first argument. For example:
+update in the lower left corner. In order to not display the update timer, enter `-t` as the first argument. 
+
+For example:
 
 ```
 python metar-cmd.py -t kbwi kdca kiad

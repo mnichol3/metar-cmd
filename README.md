@@ -5,6 +5,12 @@ A simple tool to fetch &amp; display METARs from NOAA's Aviation Weather Center
 
 - Python 2.7
 - Anaconda (optional)
+- Modules (Included in Anaconda package)
+  - urllib3
+  - sys
+  - xmltodict
+  - xml.etree.ElementTree
+  - time
 
 ### Usage
 The script takes US airport ICAO codes as arguments. Although ICAO codes are capitalized (i.e., KDCA), argument capitalization 

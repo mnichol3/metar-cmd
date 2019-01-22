@@ -9,7 +9,6 @@ A simple tool to fetch &amp; display METARs from NOAA's Aviation Weather Center
 ## Usage
 The script takes US airport ICAO codes as arguments. Although ICAO codes are capitalized (i.e., KDCA), argument capitalization 
 does not matter (Acceptable inputs: kdca; KDCA; kDcA; etc...). For example:
-
 '''
 python metar-cmd.py kbwi kdca kiad
 '''

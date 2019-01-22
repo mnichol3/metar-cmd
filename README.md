@@ -1,5 +1,5 @@
 # metar-cmd
-A simple tool to fetch &amp; display METARs from NOAA's Aviation Weather Center
+A simple tool to fetch &amp; display METARs from NOAA's Aviation Weather Center in the command prompt
 ## Getting Started
 ### Prerequisites
 

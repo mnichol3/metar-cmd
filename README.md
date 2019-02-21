@@ -4,17 +4,16 @@ A simple tool to fetch &amp; display METARs from NOAA's Aviation Weather Center 
 ### Prerequisites
 
 - Python 2.7
-- Anaconda (optional)
-- Modules (Included in Anaconda package)
-  - urllib3
-  - sys
-  - xmltodict
-  - xml.etree.ElementTree
-  - time
+  - Modules
+    - urllib3
+    - sys
+    - xmltodict
+    - xml.etree.ElementTree
+    - time
 
 ### Usage
-The script takes US airport ICAO codes as arguments. Although ICAO codes are capitalized (i.e., KDCA), argument capitalization 
-does not matter (Acceptable inputs: kdca; KDCA; kDcA; etc...). 
+The script takes US airport ICAO codes as arguments. Although ICAO codes are capitalized (i.e., KDCA), argument capitalization
+does not matter (Acceptable inputs: kdca; KDCA; kDcA; etc...).
 
 For example:
 
@@ -36,7 +35,7 @@ Updating in: 5:00
 ```
 
 The script updates the METARs every 5 minutes, and displayes a running timer counting down the minutes and seconds until the next
-update in the lower left corner. In order to not display the update timer, enter `-t` as the first argument. 
+update in the lower left corner. In order to not display the update timer, enter `-t` as the first argument.
 
 For example:
 
@@ -63,4 +62,3 @@ The script will still update the METARs even though the timer is not shown.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import urllib3
-import xml.etree.ElementTree as ET 
+import xml.etree.ElementTree as ET
 import sys
 import xmltodict
 import time
@@ -25,7 +25,7 @@ def main():
 			x = x.upper()
 			stations.append(x)
 		num = len(stations)
-		url = "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml&hoursBeforeNow=3&stationString="	
+		url = "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml&hoursBeforeNow=3&stationString="
 		i = 0
 		while (i <= num - 1):
 			url = url + stations[i]
@@ -36,20 +36,20 @@ def main():
 		http = urllib3.PoolManager()
 		response = http.request('GET', url)
 		xml_dict = xmltodict.parse(response.data)
-	
-		print("\n\n---------------------------------------------------------------------------------------")	
+
+		print("\n\n---------------------------------------------------------------------------------------")
 
 		j = 0
 		while (j < num):
-		
+
 			print(xml_dict['response']['data']['METAR'][j]['raw_text'])
 			print("---------------------------------------------------------------------------------------")
 			j += 1
-		
-		#time.sleep(300)
-		
+
 		print("\n")
-		# If -t is not passed as an argument, the update timer will be displayed. If it is, it won't be displayed
+
+		# If -t is not passed as an argument, the update timer will be displayed.
+		# If -t IS passed, the timer won't be displayed
 		if (first_arg == 1):
 			t = 300
 			while (t):
@@ -59,14 +59,14 @@ def main():
 				sys.stdout.flush()
         			time.sleep(1)
         			t -= 1
-	
+
 			sys.stdout.write("                       \r")
 			sys.stdout.flush()
 		else:
 			time.sleep(300)
-	
-	
-	
+
+
+
 
 
 if __name__ == "__main__":
